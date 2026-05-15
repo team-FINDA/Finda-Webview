@@ -1,0 +1,155 @@
+import { Global, css } from '@emotion/react'
+
+function GlobalStyles() {
+  return (
+    <Global
+      styles={css`
+        :root {
+          --text: #6b6375;
+          --text-h: #08060d;
+          --bg: #ffffff;
+          --border: #e5e4e7;
+          --code-bg: #f4f3ec;
+          --accent: #aa3bff;
+          --accent-bg: rgba(170, 59, 255, 0.1);
+          --accent-border: rgba(170, 59, 255, 0.5);
+          --social-bg: rgba(244, 243, 236, 0.5);
+          --shadow:
+            rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+            rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+          --qr-primary: #2e56f5;
+          --qr-success: #6686ff;
+          --qr-fail: #f12525;
+
+          --sans: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+          --heading: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+          --mono: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+
+          font: 18px/145% var(--sans);
+          letter-spacing: 0;
+          color-scheme: light dark;
+          color: var(--text);
+          background: var(--bg);
+          font-synthesis: none;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        @media (max-width: 1024px) {
+          :root {
+            font-size: 16px;
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --text: #9ca3af;
+            --text-h: #f3f4f6;
+            --bg: #16171d;
+            --border: #2e303a;
+            --code-bg: #1f2028;
+            --accent: #c084fc;
+            --accent-bg: rgba(192, 132, 252, 0.15);
+            --accent-border: rgba(192, 132, 252, 0.5);
+            --social-bg: rgba(47, 48, 58, 0.5);
+            --shadow:
+              rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
+              rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+          }
+
+          #social .button-icon {
+            filter: invert(1) brightness(2);
+          }
+        }
+
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        html,
+        body,
+        #root {
+          width: 100%;
+          min-width: 0;
+          min-height: 100%;
+        }
+
+        body {
+          margin: 0;
+          overflow: hidden;
+          background: #05070d;
+          touch-action: manipulation;
+          font-family: var(--sans);
+        }
+
+        #root {
+          max-width: none;
+          margin: 0;
+          border: 0;
+          text-align: initial;
+          display: block;
+          min-height: 100svh;
+        }
+
+        h1,
+        h2 {
+          font-family: var(--heading);
+          font-weight: 500;
+          color: var(--text-h);
+        }
+
+        h1 {
+          margin: 32px 0;
+          font-size: 56px;
+          letter-spacing: 0;
+        }
+
+        h2 {
+          margin: 0 0 8px;
+          font-size: 24px;
+          line-height: 118%;
+          letter-spacing: 0;
+        }
+
+        @media (max-width: 1024px) {
+          h1 {
+            margin: 20px 0;
+            font-size: 36px;
+          }
+
+          h2 {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          margin: 0;
+        }
+
+        button {
+          font: inherit;
+        }
+
+        code,
+        .counter {
+          display: inline-flex;
+          border-radius: 4px;
+          color: var(--text-h);
+          font-family: var(--mono);
+        }
+
+        code {
+          padding: 4px 8px;
+          background: var(--code-bg);
+          font-size: 15px;
+          line-height: 135%;
+        }
+      `}
+    />
+  )
+}
+
+export default GlobalStyles
