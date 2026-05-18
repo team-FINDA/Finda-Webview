@@ -132,16 +132,16 @@ const AttendanceChartScreen = styled.main`
   height: 100svh;
   min-height: 180px;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 20px 24px;
+  align-items: stretch;
+  justify-content: stretch;
   overflow: hidden;
   background: #ffffff;
 `
 
 const AttendanceChartContainer = styled.section`
-  width: min(100%, 470px);
-  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
   display: flex;
@@ -162,9 +162,9 @@ const AttendanceChartTitle = styled.p`
 `
 
 const AttendanceChartBody = styled.div`
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  height: 150px;
+  min-height: 0;
   padding: 8px 0 0 8px;
 `
 
